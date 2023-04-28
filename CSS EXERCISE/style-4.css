@@ -1,0 +1,24 @@
+.container {
+    column-width: 250px;
+    column-gap: 20px;
+  }
+  
+  .card {
+    background-color: rgb(100, 255, 180);
+    border: 2px solid rgb(30, 191, 255);
+    padding: 10px;
+    margin: 0 0 1em 0;
+  }
+  .card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    background-color: rgb(89, 255, 175);
+    border: 2px solid rgb(28, 73, 255);
+    padding: 10px;
+    margin: 0 0 1em 0;
+  }
+  a {
+    text-decoration:none
+  }
+  
+  

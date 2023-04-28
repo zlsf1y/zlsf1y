@@ -1,0 +1,32 @@
+p:hover {
+    color:rgb(28, 255, 32);
+}
+
+h1 {
+    color:white;
+}
+
+a {
+    text-decoration:none
+}
+.box {
+  background-color: #567895;
+}
+
+h2 {
+  color: white;
+}
+
+span {
+    background-color:black;
+  }
+body {
+  background-color: black;
+}   
+p {
+    font-size: 18px
+}
+a {
+  color: white;
+  font-size: 18px
+}

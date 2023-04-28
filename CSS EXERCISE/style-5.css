@@ -1,0 +1,25 @@
+.container {
+    column-width: 250px;
+    column-gap: 20px;
+  }
+  
+ body {
+    background-color: rgb(0, 0, 0);
+
+  }
+  .card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    background-color: rgb(000);
+    border: 2px solid rgb(28, 73, 255);
+    padding: 10px;
+    margin: 0 0 1em 0;
+  }
+  a {
+    text-decoration:none
+  }
+  .card:hover {
+    background-color:rgb(24, 197, 255);
+  }
+  
+  
