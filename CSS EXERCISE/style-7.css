@@ -1,0 +1,153 @@
+.awww {
+    transform: translate(300px, 500px);
+    position:absolute;
+}
+.box {
+    background-color: rgb(179, 103, 255);
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    text-align:center;
+}
+  
+.box:hover {
+    animation-name: rotate;
+    animation-duration: 0.7s;
+    animation-direction: reverse;
+    background-color:rgb(8, 255, 12);
+}
+  
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+}
+a {
+    text-decoration:none
+ }
+ .awww2 {
+    transform: translate(400px, 380px);
+    position:absolute;
+}
+ .box2 {
+    width: 260px;
+    height: 130px;
+    background: rgb(255, 80, 153);
+    -moz-border-radius: 140px / 70px;
+    -webkit-border-radius: 140px / 70px;
+    border-radius: 140px / 70px;
+    text-align:center;
+}
+.box2:hover {
+    animation-name: rotate;
+    animation-duration: 0.7s;
+    animation-direction: reverse;
+    background-color:rgb(86, 213, 255);
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    transform: scale(2);
+}
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 100px solid transparent;
+    border-right: 200px solid rgb(166, 255, 57);
+    border-bottom: 100px solid transparent;
+}
+.triangle:hover {
+    animation-name: rotate;
+    animation-duration: 0.7s;
+    animation-direction: reverse;
+    background-color:rgba(255, 255, 255, 0);
+}
+.abcd {
+    transform: translate(70px, -30px);
+    position:absolute;
+}
+.abcd:hover {
+    color: rgb(255, 255, 255);
+}
+.abc {
+    transform: translate(0px, -150px);
+    position:absolute;
+    font-size: 30px;
+}
+.abc:hover {
+    color: rgb(255, 255, 255);
+}
+.heart:hover {
+    transform: scale(2.5);
+}
+.awww3 {
+    transform: translate(630px, 340px);
+    position:absolute;
+    z-index: 1;
+}
+.awww4 {
+    transform: translate(680px, 350px);
+    position:absolute;
+
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: rgb(66, 115, 230);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    text-align: center;
+}
+.circle:hover {
+    animation-name: rotate;
+    animation-duration: 0.7s;
+    animation-direction: reverse;
+    background-color:rgb(230, 255, 43);
+}
+.awww5 {
+    transform: scale(2) translate(90px, 00px);
+    position:absolute;
+    z-index: -1;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Flexbox布局示例</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 15px;
+      }
+
+      .main {
+        display: flex; /* 嵌套flex容器，实现左中右3列布局 */
+        flex-grow: 1;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+
+      .sidebar {
+        width: 25%; /* 设置侧边栏宽度 */
+        background-color: #f0f0f0;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+
+      .content {
+        flex-grow: 1; /* 填充剩余空间 */
+        background-color: #fff;
+        margin-left: 15px;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 15px;
+      }
+
+      /* 响应式布局，当屏幕尺寸小于768px时，改为上下布局 */
+      @media screen and (max-width: 768px) {
+        .main {
+          flex-direction: column;
+        }
+        .sidebar {
+          width: auto;
+        }
+        .content {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>网页标题</h1>
+      </header>
+      <div class="main">
+        <div class="sidebar">
+          <h2>侧边栏</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="content">
+          <h2>主内容区</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum mattis ligula, nec consectetur felis vehicula euismod. Nam semper rutrum elit vel ultricies. Nulla facilisi. Donec quis justo in risus interdum scelerisque. Nullam eu enim sit amet tellus euismod ultricies. Integer malesuada non leo sit amet molestie. Nunc vel quam erat. Ut non turpis justo. Aenean sed tristique ligula. Nunc semper risus ac augue fringilla ultrices. Mauris eu odio elit.</p>
+        </div>
+        <div class="sidebar">
+          <h2>侧边栏</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <footer>
+        <p>版权信息</p>
+      </footer>
+    </div>
+  </body>
+</html>

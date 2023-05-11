@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>网页标题</title>
+    <style>
+      /* 设置网页渐变背景 */
+      body {
+        background: linear-gradient(to bottom right, #f6b779, #c06c84);
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 设置页面容器为flex布局，方向为column，填满整个窗口高度 */
+      .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* 设置标题样式 */
+      header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+      }
+
+      /* 设置主内容区flex布局，让左右两列占据80%和20%的宽度 */
+      .main {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        flex-grow: 1;
+      }
+
+      /* 设置侧边栏宽度为20% */
+      .sidebar {
+        width: 20%;
+        background-color: #ddd;
+        padding: 20px;
+      }
+
+      /* 设置主内容区样式 */
+      .content {
+        width: 80%;
+        background-color: #fff;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>网页标题</h1>
+      </header>
+      <div class="main">
+        <div class="sidebar">

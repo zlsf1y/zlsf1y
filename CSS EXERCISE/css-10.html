@@ -1,0 +1,59 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+        .box {
+            width: 50%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    
+        .animate {
+            padding-left: 20px;
+            font-size: 20px;
+            color: #ffffff;
+            display: inline-block;
+            white-space: nowrap;
+            animation: 25s wordsLoop linear infinite normal;
+        }
+        @keyframes wordsLoop {
+            0% {
+                transform: translateX(300%);
+                -webkit-transform: translateX(300%);
+            }
+            100% {
+                transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+            }
+        }
+    
+        @-webkit-keyframes wordsLoop {
+            0% {
+                transform: translateX(300%);
+                -webkit-transform: translateX(300%);
+            }
+            100% {
+                transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+            }
+        }
+        body {
+    background-color: black;
+  }  
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h1 class="animate">
+                This is a part of design exercise from Ann. Some preliminary practice in plants, colors, senses and architecture. They may seem very shallow, monotonous or even boring.      
+                What would a room be like if it breathed, if it could grow? I tried to imagine the possibility. </span> Would it be like a plant, able to feel pain and heal itself after injury? This room is made of plants, it is part of the courtyard, so I named the house 'the garden'.
+            </h1>
+        </div>
+    </body>
+    </html>
+    

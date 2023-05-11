@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="margin: 0;">
+    <div id="container"></div>
+</body>
+
+<style>
+    #container {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    @media only screen and (orientation: portrait) {
+        #container {
+            grid-template-columns: repeat(16, calc(100vh / 16));
+        }
+    }
+
+    @media only screen and (orientation: landscape) {
+        #container {
+            grid-template-columns: repeat(16, 1fr);
+        }
+    }
+
+    #heart {
+        position: relative;
+        width: 100px;
+        height: 90px;
+        background-repeat: repeat;
+        background-size: cover;
+    }
+
+    #heart:before,
+    #heart:after {
+        position: absolute;
+        content: "";
+        left: 50px;
+        top: 0;
+        width: 50px;
+        height: 80px;
+        background: rgba(116, 255, 118, 0.736);
+        -moz-border-radius: 50px 50px 0 0;
+        border-radius: 50px 50px 0 0;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 0 100%;
+        -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+        -o-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+    }
+
+    #heart:after {
+        left: 0;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin: 100% 100%;
+        -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+        -o-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+    }
+    @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+    }
+    #heart:hover {
+    animation-name: rotate;
+    animation-duration: 0.1s;
+    animation-direction: reverse;
+    }
+
+
+
+</style>
+
+<script>
+
+    let x = 0;
+    let container = document.getElementById("container");
+    document.addEventListener('DOMContentLoaded', function () {
+        createBoxes();
+    });
+
+    function createBoxes() {
+        document.querySelectorAll('#container').forEach((div) => {
+            for (var i = 0; i < 256; i++) {
+                let box = document.createElement('div');
+                box.id = "heart";
+                div.appendChild(box);
+            }
+
+        });
+    }
+</script>
+
+</html>
+    

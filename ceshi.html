@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML EXERCISE</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="#" />
+    <link rel="stylesheet" href="exercise.css" />
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script>
+        var img;
+        function preload() {
+            img = loadImage("https://test21fghig.oss-cn-beijing.aliyuncs.com/QQ20230502-0.png"); //引入图片，使用图片地址，这里我用的是我自己的oss对象存储地址
+            console.log(img)
+        }
+        function setup() { //初始化画布函数
+            createCanvas(600, 600) // 创建一个 600*600 像素的画布
+            background(255) // 画布背景色 background
+
+        }
+
+        function draw() { //绘画函数
+            background(255); //设置背景颜色
+            fill(18, 252, 18);
+            noStroke();
+            var ratio = height / width;
+            var tilesX = map(mouseX, 0, width, 10, 100);//鼠标地址映射
+            var tilesY = ratio * tilesX;
+            var tileXSize = width / tilesX;
+            var tileYSize = height / tilesY;
+            for (let y = 0; y < img.height; y += tileYSize) {
+                for (let x = 0; x < img.width; x += tileXSize) {
+                    var c = img.get(x, y);
+                    var b = map(brightness(c), 0, 100, 2, 0);//获取原图明度值映射
+                    push();
+                    translate(x, y);
+                    rect(0, 0, b * tileXSize, b * tileYSize);//绘制矩形
+                    pop();
+                }
+            }
+        }
+    </script>
